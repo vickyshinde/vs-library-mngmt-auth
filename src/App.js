@@ -28,7 +28,10 @@ const App = () => {
             </ul>
           </nav>
           {auth.isAuthenticated && (
-            <button onClick={auth.signOut}>Sign Out</button>
+            <div>
+              <p>Welcome, {auth.user.username}</p>
+              <button onClick={auth.signOut}>Sign Out</button>
+            </div>
           )}
 
           <Routes>

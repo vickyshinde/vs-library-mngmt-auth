@@ -15,7 +15,8 @@ const SignIn = () => {
       setError('Invalid username or password');
       return;
     }
-    auth.signIn();
+    const userInfo = { username, key: 'key', key1: 'key1' };
+    auth.signIn(userInfo);
     navigate('/books');
   };
 
